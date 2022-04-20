@@ -16,5 +16,16 @@ public class App {
         Settings1 settings2 = declaredConstructor.newInstance();
 
         System.out.println(settings1 == settings2);
+
+        //싱글톤 패턴 구현을 깨트리는 방법 2(직렬화 & 역직렬화 사용)
+        Settings1 settings3 = Settings1.getInstance();
+        Settings1 settings4 = null;
+        try (ObjectOutput out = new ObjectOutputStream(new FileOutputStream("settings.obj"))) {
+            out.writeObject(settings3);
+        }
+        try (ObjectInput in = new ObjectInputStream(new FileInputStream("settings.obj"))) {
+            settings4 = (Settings1) in.readObject();
+        }
+        System.out.println(settings3 == settings4);
     }
 }
