@@ -2,6 +2,8 @@ package com.heesang.designpatterns_study._01_creational_patterns._02_factory_met
 
 import com.heesang.designpatterns_study._01_creational_patterns._03_abstract_factory._01_before.WhiteAnchor;
 import com.heesang.designpatterns_study._01_creational_patterns._03_abstract_factory._01_before.WhiteWheel;
+import com.heesang.designpatterns_study._01_creational_patterns._03_abstract_factory._02_after.Anchor;
+import com.heesang.designpatterns_study._01_creational_patterns._03_abstract_factory._02_after.Wheel;
 
 public class Ship {
 
@@ -11,9 +13,9 @@ public class Ship {
 
     private String logo;
 
-    private WhiteWheel wheel;
+    private Wheel wheel;
 
-    private WhiteAnchor anchor;
+    private Anchor anchor;
 
     public String getName() {
         return name;
@@ -48,19 +50,19 @@ public class Ship {
                 '}';
     }
 
-    public WhiteWheel getWheel() {
+    public Wheel getWheel() {
         return wheel;
     }
 
-    public void setWheel(WhiteWheel wheel) {
+    public void setWheel(Wheel wheel) {
         this.wheel = wheel;
     }
 
-    public WhiteAnchor getAnchor() {
+    public Anchor getAnchor() {
         return anchor;
     }
 
-    public void setAnchor(WhiteAnchor anchor) {
+    public void setAnchor(Anchor anchor) {
         this.anchor = anchor;
     }
 }
