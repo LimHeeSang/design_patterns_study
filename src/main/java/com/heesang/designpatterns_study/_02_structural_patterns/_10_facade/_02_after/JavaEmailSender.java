@@ -8,11 +8,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class EmailSender {
+public class JavaEmailSender implements EmailSender{
 
     private EmailSettings emailSettings;
 
-    public EmailSender(EmailSettings emailSettings) {
+    public JavaEmailSender(EmailSettings emailSettings) {
         this.emailSettings = emailSettings;
     }
 
