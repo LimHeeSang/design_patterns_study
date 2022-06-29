@@ -11,8 +11,8 @@ import java.util.Properties;
 public class Client {
 
     public static void main(String[] args) {
-        String to = "keesun@whiteship.me";
-        String from = "whiteship@whiteship.me";
+        String to = "heesang@techcourse.me";
+        String from = "pobi@techcourse.me";
         String host = "127.0.0.1";
 
         Properties properties = System.getProperties();
